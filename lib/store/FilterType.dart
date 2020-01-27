@@ -1,0 +1,5 @@
+enum FilterType {
+  SHOW_ALL, 
+  SHOW_COMPLETED, 
+  SHOW_UNCOMPLETED
+}
