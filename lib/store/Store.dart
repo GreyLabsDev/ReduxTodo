@@ -24,12 +24,7 @@ class Store {
   }
 
   static StoreState _buildInitialState() => StoreState(
-    FilterType.SHOW_ALL, 
-    [
-      TodoModel("Buy Coke"),
-      TodoModel("Go to gym"),
-      TodoModel("Sleep more today"),
-    ]
+    FilterType.SHOW_ALL, []
   );
 }
 

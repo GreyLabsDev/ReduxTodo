@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:redux_todo/action/ActionAddTodo.dart';
+import 'package:redux_todo/action/ActionInitTodos.dart';
 import 'package:redux_todo/action/ActionRemoveTodo.dart';
 import 'package:redux_todo/action/ActionToggleTodo.dart';
 import 'package:redux_todo/dispatcher/Dispatcher.dart';
@@ -22,6 +23,12 @@ class ScreenMainState extends State {
   var _dispatcher = Dispatcher();
   var _stateProvider = StateProvider();
   var textController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _dispatcher.dispatch(ActionInitTodos.initTodos());
+  }
 
   @override
   Widget build(BuildContext context) {

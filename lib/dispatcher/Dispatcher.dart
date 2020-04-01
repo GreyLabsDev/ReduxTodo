@@ -24,6 +24,10 @@ class Dispatcher {
         _todosReducer.toggleTodo(action);
       }
       break;
+      case ActionType.INIT_TODOS: {
+        _todosReducer.initTodos();
+      }
+      break;
       case ActionType.SET_VISIBILITY_FILTER: {
         _filterReducer.setVisibilityFilter(action);
       }
